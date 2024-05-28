@@ -1,5 +1,4 @@
 # GaitStability_COP_COM
-"This repository is part of the coursework for the course 'Introduction to Engineering Research' taught at TU Delft, Netherlands."
 
 Topic: Evaluation of Gait Stability in Response to Exoskeleton Variations
 
