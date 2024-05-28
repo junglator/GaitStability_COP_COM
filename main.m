@@ -57,27 +57,34 @@ function main
     subplot(1, 2, 1);
     h1 = errorbar(1:4, [CO_day1; ST_day1; RO_day1], [CO_std_day1; ST_std_day1; RO_std_day1], 'o-', ...
         'MarkerSize', 8, 'MarkerFaceColor', 'w', 'LineWidth', 1.5);
-    title('Day 1', 'FontWeight', 'bold'); 
-    ylabel('Values', 'FontWeight', 'bold'); 
-    xlabel('Variation', 'FontWeight', 'bold'); 
+    title('Day 1',  'FontSize', 20); 
+    ylabel('Values',  'FontSize', 18); 
+    xlabel('Variation', 'FontSize', 18); 
     
     legend(h1(1:3), 'CO', 'ST', 'RO');
     xticks(1:3);
     xticklabels({'NW', 'ZT', 'GA'});
     grid on;
+    ax = gca; % Get current axes
+    ax.XTickLabel = {'NW', 'ZT', 'GA'};
+    ax.FontSize = 16; % Set the font size for the tick labels
     
     % Day 2
     subplot(1, 2, 2);
     h2 = errorbar(1:4, [CO_day2; ST_day2; RO_day2], [CO_std_day2; ST_std_day2; RO_std_day2], 'o-', ...
         'MarkerSize', 8, 'MarkerFaceColor', 'w', 'LineWidth', 1.5);
-    title('Day 2', 'FontWeight', 'bold'); 
-    ylabel('Values', 'FontWeight', 'bold'); 
-    xlabel('Variation', 'FontWeight', 'bold'); 
+    title('Day 2', 'FontWeight', 'bold', 'FontSize', 20); 
+    ylabel('Values', 'FontSize', 18); 
+    xlabel('Variation',  'FontSize', 18); 
     
-    legend(h2(1:3), 'CO', 'ST', 'RO'); 
+    legend(h2(1:3), 'CO', 'ST', 'RO', 'FontSize', 16); 
     xticks(1:4);
     xticklabels({'NW', 'ZT', 'GA', 'OP'});
     grid on;
+    
+    ax = gca; % Get current axes
+    ax.XTickLabel = {'NW', 'ZT', 'GA', 'OP'};
+    ax.FontSize = 16; % Set the font size for the tick labels
 
     %
     % Create arrays/lists for the raw data
@@ -173,9 +180,16 @@ function main
     % Customize the plot
     xticks(1:3);
     xticklabels({'Normal Walking', 'Zero Torque', 'Generic Assistance'});
-    ylabel('Mean variability in distance between CoP and CoM', 'FontWeight', 'bold');
-    title('Day 1');
+    xlabel('Variation', 'FontSize', 18); 
+    ylabel('Mean variability in distance between CoP and CoM', 'FontSize', 14);
+    title('Day 1', 'FontSize', 20);
     
+    % Set the font size for x-tick labels
+    ax = gca; % Get current axes
+    ax.XTickLabel = {'Normal Walking', 'Zero Torque', 'Generic Assistance'};
+    ax.FontSize = 16; % Set the font size for the tick labels
+    
+
     for i = 1:length(unique(group))
         patch(get(h(5, i), 'XData'), get(h(5, i), 'YData'), boxColors(i,:), 'FaceAlpha', 0.5);
     end
@@ -199,9 +213,16 @@ function main
     
     % Customize the plot
     xticks(1:4);
-    xticklabels({'Normal Walking', 'Zero Torque', 'Generic Assistance','Optimal Assistance'});
-    ylabel('Mean variability in distance between CoP and CoM', 'FontWeight', 'bold');
-    title('Day 2');
+    xticklabels({'Normal Walking', 'Zero Torque', 'Generic Assistance', 'Optimal Assistance'});
+    xlabel('Variation', 'FontSize', 18);
+    ylabel('Mean variability in distance between CoP and CoM', 'FontSize', 14);
+    title('Day 2', 'FontSize', 20);
+    
+    % Set the font size for x-tick labels
+    ax = gca; % Get current axes
+    ax.XTickLabel = {'Normal Walking', 'Zero Torque', 'Generic Assistance', 'Optimal Assistance'};
+    ax.FontSize = 16; % Set the font size for the tick labels
+
     
     colors = repmat(boxColors, ceil(size(h, 2) / size(boxColors, 1)), 1);
     for i = 1:size(h, 2)
