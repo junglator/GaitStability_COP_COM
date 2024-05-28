@@ -96,5 +96,3 @@ This project aims to assess the effect of various lower limb exoskeleton variati
 ## Reference
 
 1. K. L. Poggensee and S. H. Collins, “How adaptation, training, and customization contribute to benefits from exoskeleton assistance,” Science Robotics, vol. 6, no. 58, p. eabf1078, 2021.
-
-This README provides an overview of the project setup, data organization, and usage instructions. Make sure to follow the steps precisely to replicate the results and analyses accurately.
