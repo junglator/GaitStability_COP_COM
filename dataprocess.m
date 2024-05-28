@@ -47,7 +47,7 @@ for p = 1:length(participants)
                 % Normalize data
                 height_factor = Participant_heights(p) * 0.530;
                 
-                % Store normalized data in the struct
+                % Store data in the struct
                 data.(participant).(day).(activity).COM.X = com_data_X(1:120);
                 data.(participant).(day).(activity).COM.Y = com_data_Y(1:120);
                 data.(participant).(day).(activity).COP.X = cop_data_X(1:120);
