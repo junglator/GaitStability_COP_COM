@@ -34,7 +34,7 @@ This project aims to assess the effect of various lower limb exoskeleton variati
 2. **Data Organization**: Group the data as follows:
 
    ```
-   Code
+   Folder/
    ├── CO3
    │   ├── Day1
    │   └── Day2
