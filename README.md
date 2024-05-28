@@ -53,6 +53,46 @@ This project aims to assess the effect of various lower limb exoskeleton variati
 
 3. **Run the Code**: Run `main.m` to see the results and the plots.
 
+## Files Overview
+
+1. **centerofMass.m**
+    - Function to calculate the Center of Mass (CoM) coordinates given the ground reaction force (GRF) data.
+    - **Inputs:**
+        - `file_path`: Path to the file containing GRF data.
+        - `weight`: Subject weight in kilograms.
+    - **Outputs:**
+        - `CoMx`: CoM position in the x-direction (m).
+        - `CoMy`: CoM position in the y-direction (m).
+
+2. **centerofPressure.m**
+    - Function to calculate the Center of Pressure (CoP) coordinates given the GRF data.
+    - **Inputs:**
+        - `file_path`: Path to the file containing GRF data.
+    - **Outputs:**
+        - `CoPx`: CoP position in the x-direction (m).
+        - `CoPy`: CoP position in the y-direction (m).
+     
+3. **initCoM.m**
+    - Function to calculate the initial coordinates for the Center of Mass (CoM) using the subject's quiet standing (QS) ground reaction force data.
+    - **Inputs:**
+        - `var`: Struct containing GRF and moment data for left and right foot.
+    - **Outputs:**
+        - `CoMx`: Initial x-coordinate of the CoM (m).
+        - `CoMy`: Initial y-coordinate of the CoM (m).
+
+4. **dataprocess.m**
+    - Script to process the data for multiple participants, days, and activities.
+    - Calculates distances between CoM and CoP and normalizes the data.
+    - **Outputs:**
+        - `data`: Struct containing normalized CoM and CoP data.
+        - `distance`: Struct containing normalized distances between CoM and CoP.
+
+5. **main.m**
+    - Main script to analyze distance data for different sets of participants, days, and activities.
+    - Calculates mean and standard deviation of distance data and plots the results.
+    - **Usage:**
+        - Execute the script to load and process the data, then generate and display plots of the results.
+
 ## Reference
 
 1. K. L. Poggensee and S. H. Collins, “How adaptation, training, and customization contribute to benefits from exoskeleton assistance,” Science Robotics, vol. 6, no. 58, p. eabf1078, 2021.
