@@ -31,7 +31,7 @@ This project aims to assess the effect of various lower limb exoskeleton variati
 
 1. **Setup**: Ensure all code files and the data folders are in the same directory.
 
-2. **Data Organization**: Group the data as follows:
+2. **Data Organization**: Group the data and code files as follows:
 
    ```
    Folder/
